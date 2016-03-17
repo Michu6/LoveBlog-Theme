@@ -1,0 +1,15 @@
+// CONTACT US
+
+form {
+	@include placeholder();
+	input {
+		@include form-items();
+	}
+	textarea {
+		&.form-control {
+			@include form-items();
+			height: 200px;
+			resize: none;
+		}
+	}
+}

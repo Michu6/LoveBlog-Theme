@@ -1,0 +1,32 @@
+// TYPOGRAPHY
+@include font-face('BebasNeue', '../font/BEBAS___');
+@include font-face('HelveticaNeue', '../font/HelveticaNeue');
+
+
+*, h1, h2, h3, h4, h5, h6 {
+	@include font-family($BebasNeue);
+}
+
+body, p {
+	@include font-family($HelveticaNeue);
+}
+
+h2 {
+	color: $white;
+}
+
+h3 {
+	background-color: $white;
+	color: $dark-melon;
+	font-size: 1.3em;
+	margin-top: 0;
+	margin-right: 50%;
+}
+
+span {
+	&.text-melon {
+		@include font-family($HelveticaNeue);
+		color: $dark-melon;
+	}
+}
+

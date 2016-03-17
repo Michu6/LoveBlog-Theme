@@ -1,0 +1,19 @@
+// ABOUT US
+blockquote {
+	border-left: 7px solid $dark-melon;
+	color: $dark-melon;
+	margin: 30px;
+}
+
+// BLOG
+#blog {
+	.quote-text {
+		background: url(../images/quote_bg.png) repeat;
+		padding: 20px;
+		margin-bottom: 50px;
+		p {
+			background: url(../images/quote.png) no-repeat;
+			padding-left: 40px;
+		}
+	}
+}

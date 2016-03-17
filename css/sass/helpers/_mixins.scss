@@ -1,0 +1,219 @@
+// MIXIN
+@mixin brd-lefright() {
+	border-left: 15px solid white;
+	border-right: 15px solid white;
+}
+
+@mixin double-bg($heightbg) {
+	@include brd-lefright();
+	background-color: $dark-melon;
+	color: white;
+	padding-left: 20px;
+	height: $heightbg;
+}
+
+@mixin font-face($font-name, $file-name) { 
+	@font-face {
+	  font-family: quote($font-name);
+	  src: url($file-name + '.eot');
+	  src: url($file-name + '.woff') format('woff'),
+	       url($file-name + '.ttf')  format('truetype');
+	  font-weight: 300;
+	  font-style: normal;
+	}
+}
+
+@mixin font-family($font-name){
+	font-family: $font-name;
+}
+
+@mixin form-items() {
+	border: 1px solid $dark-melon;
+	color: $dark-melon;
+	padding: 15px;
+}
+
+// PLACEHOLDER FORM
+@mixin placeholder(){
+	::-webkit-input-placeholder {
+	   color: $dark-melon;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	   color: $dark-melon;  
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: $dark-melon;  
+	}
+	:-ms-input-placeholder {  
+	   color: $dark-melon;  
+	}
+}
+
+
+// BUTTON
+@mixin btn ($widthbtn: auto) {
+	@include transition(0.4s);
+	background-color: $dark-melon;
+	color: $white;
+	font-size: 1.5em;
+	width: $widthbtn;
+	&:hover {
+		@include shadow-inset(0, 0, 10px, darken($dark-melon, 30%));
+		@include radius(10px);
+		@include transition(0.4s);
+		color: $white;
+		letter-spacing: 10px;
+		&:after {
+			content: "!!!!";
+		}
+	}
+}
+
+// NAVBAR SCROLL
+@mixin navbarscroll (){
+	h1 {
+		color: $white;
+		@include text-shadow(2px, 3px, 6px, darken($dark-melon, 30%));
+		span {
+			@include text-shadow(2px, 3px, 6px, darken($dark-melon, 30%));
+		}
+	}
+}
+@mixin navbar-white (){
+	header .navbar ul {
+	padding-top: 50px;
+		li a {
+			color: $white;
+			&:hover {
+				background-color: $white;
+				color: $dark-melon;
+			}
+			&.active {
+				color: $white;
+			}
+		}
+	}
+}
+
+// IMAGE BORDER
+@mixin img-border () {
+	background: none $white;
+	border: 1px solid $silver;
+	padding: 3px;
+}
+
+// ICON ARTICLE
+@mixin icon-article ($icon, $repeat: no-repeat) {
+	background: url(#{$icon}) $repeat;
+	left: -78px;
+	position: absolute;
+	height: 75px;
+	width: 75px;
+}
+
+// PAGINATION
+@mixin pagination() {
+	border: none;
+	border-radius: 0;
+	color: $silver;	
+	margin-right: 10px;
+	&:hover {
+		background-color: $dark-melon;
+		color: $white;
+	}
+	&:focus {
+		background-color: transparent;
+		color: $silver;
+	}
+}
+
+
+// , $icon2, $icon3, $icon4, $icon5
+ // background-image: url(#{$image-path}/#{$name}.svg);
+@mixin img-icon-article ($img-icon-article1, $img-icon-article2, $img-icon-article3, $img-icon-article4, $img-icon-article5) {	
+	article:first-child {
+		.icon-article {
+			@include icon-article($img-icon-article1);
+		}
+	}
+	article:nth-child(3) {
+		.icon-article {
+			@include icon-article($img-icon-article2);
+		}
+	}
+	article:nth-child(5) {
+		.icon-article {
+			@include icon-article($img-icon-article3);
+		}
+	}
+	article:nth-child(7) {
+		.icon-article {
+			@include icon-article($img-icon-article4);
+		}
+	}
+	article:nth-child(9) {
+		.icon-article {
+			@include icon-article($img-icon-article5);
+		}
+	}
+}
+
+@mixin single-servicebg ($single_service1, $single_service2,  $single_service3) {	
+	.service_area .col-md-4:first-child {
+		.single_service h3 {
+			background: url($single_service1) no-repeat;
+    	padding-left: 68px;
+    	margin-right: 0;
+		}
+	}
+	.service_area .col-md-4:nth-child(2) {
+		.single_service h3 {
+			background: url($single_service2) no-repeat;
+    	padding-left: 68px;
+    	margin-right: 0;
+		}
+	}
+	.service_area .col-md-4:nth-child(3) {
+		.single_service h3 {
+			background: url($single_service3) no-repeat;
+    	padding-left: 68px;
+    	margin-right: 0;
+		}
+	}
+}
+
+@mixin radius($radius) {
+-webkit-border-radius: $radius;
+-moz-border-radius: $radius;
+border-radius: $radius;
+}
+
+@mixin shadow($x, $y, $blur, $color) {
+-webkit-box-shadow: $x $y $blur $color;
+-moz-box-shadow: $x $y $blur $color;
+box-shadow: $x $y $blur $color;
+}
+@mixin text-shadow($x, $y, $blur, $color) {
+-webkit-text-shadow: $x $y $blur $color;
+-moz-text-shadow: $x $y $blur $color;
+text-shadow: $x $y $blur $color;
+}
+
+@mixin shadow-inset($x, $y, $blur, $color) {
+-webkit-box-shadow: inset $x $y $blur $color;
+-moz-box-shadow: inset $x $y $blur $color;
+box-shadow: inset $x $y $blur $color;
+}
+
+@mixin transition($trans-time) {
+-webkit-transition: all $trans-time ease-out;
+-moz-transition: all $trans-time ease-out;
+-o-transition: all $trans-time ease-out;
+transition: all $trans-time ease-out;
+}
+
+@mixin box-sizing {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
