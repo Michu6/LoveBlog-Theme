@@ -1,0 +1,26 @@
+// PAGINATION
+
+// BLOG
+#portfolio {
+	.pagination ul li {
+		&:first-child {
+			margin-right: 20px;
+		}
+		a{
+			@include font-family($BebasNeue);	
+			@include pagination();
+			&.active {
+				background-color: $dark-melon;
+				color: $white;
+			}
+		}
+	}	
+}
+
+// BLOG
+#blog {
+	@extend #portfolio;
+	.pagination ul li:first-child {
+		margin-right: 0;
+	}
+}

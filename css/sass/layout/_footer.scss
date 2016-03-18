@@ -1,0 +1,8 @@
+// FOOTER
+footer {
+	background-color: $soft-melon;
+	.footer {
+		@include double-bg(auto);
+		padding: 0 20px 60px;
+	}
+}

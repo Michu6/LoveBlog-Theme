@@ -1,0 +1,24 @@
+/*IMAGE STYLES*/
+.main_content {
+	img {
+		&.img-style {
+			@include img-border ();
+		}
+	}
+}
+
+// ABOUTUS
+.aboutus {
+	img {
+		margin-right: 20px;
+		margin-bottom: 20px;
+		width: auto;
+	}
+}
+
+// FOOTER
+footer {
+	img {
+		width: auto;
+	}
+}

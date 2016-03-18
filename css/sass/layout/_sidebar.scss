@@ -1,0 +1,15 @@
+/* MAIN CONTENT AREA SIDEBAR */
+.sidebar {
+	.text-sidebar {
+		background-image: url(../images/heading-bg.png);
+	}
+	img {
+		border: 1px solid $dark-melon;
+		margin: 0 5px 8px 0;
+		width: 55px;
+	}
+		a {
+		color: black;
+		@include font-family($HelveticaNeue);
+	}
+}

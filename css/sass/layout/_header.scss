@@ -1,0 +1,27 @@
+/* HEADER */
+header .navbar ul {
+	padding-top: 20px;
+	li a {
+		color: $silver;
+		&:hover {
+			background-color: $white;
+			color: $dark-melon;
+		}
+		&.active {
+			color: $dark-melon;
+		}
+	}
+}
+
+.nav-dark-melon {
+	@include navbarscroll();
+	@include transition(0.4);
+	@include navbar-white(); //MIXIN LÍNEA 82 HELPERS/_MIXIN.SCSS
+	background-color: $dark-melon;
+
+}
+
+.nav-white {
+	@include transition(0.4s);
+	background-color: $white;
+}
