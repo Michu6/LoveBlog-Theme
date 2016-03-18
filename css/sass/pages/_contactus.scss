@@ -1,11 +1,12 @@
 // CONTACT US
 
 form {
-	@include placeholder();
 	input {
 		@include form-items();
+		@include placeholder();
 	}
 	textarea {
+		@include placeholder();
 		&.form-control {
 			@include form-items();
 			height: 200px;
@@ -13,3 +14,4 @@ form {
 		}
 	}
 }
+

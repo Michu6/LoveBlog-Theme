@@ -271,20 +271,30 @@ footer {
   padding-left: 68px;
   margin-right: 0; }
 
-form ::-webkit-input-placeholder {
-  color: #E8603C; }
-form :-moz-placeholder {
-  /* Firefox 18- */
-  color: #E8603C; }
-form ::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #E8603C; }
-form :-ms-input-placeholder {
-  color: #E8603C; }
 form input {
   border: 1px solid #E8603C;
   color: #E8603C;
   padding: 15px; }
+  form input#formarea::-webkit-input-placeholder {
+    color: #F3AF9D; }
+  form input#formarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #F3AF9D; }
+  form input#formarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #F3AF9D; }
+  form input#formarea:-ms-input-placeholder {
+    color: #F3AF9D; }
+form textarea#formarea::-webkit-input-placeholder {
+  color: #F3AF9D; }
+form textarea#formarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #F3AF9D; }
+form textarea#formarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #F3AF9D; }
+form textarea#formarea:-ms-input-placeholder {
+  color: #F3AF9D; }
 form textarea.form-control {
   border: 1px solid #E8603C;
   color: #E8603C;

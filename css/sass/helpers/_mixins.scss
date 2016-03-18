@@ -35,17 +35,17 @@
 
 // PLACEHOLDER FORM
 @mixin placeholder(){
-	::-webkit-input-placeholder {
-	   color: $dark-melon;
+	&#formarea::-webkit-input-placeholder {
+		color: $soft-melon;
 	}
-	:-moz-placeholder { /* Firefox 18- */
-	   color: $dark-melon;  
+	&#formarea:-moz-placeholder { /* Firefox 18- */
+		color: $soft-melon;  
 	}
-	::-moz-placeholder {  /* Firefox 19+ */
-	   color: $dark-melon;  
+	&#formarea::-moz-placeholder {  /* Firefox 19+ */
+		color: $soft-melon;  
 	}
-	:-ms-input-placeholder {  
-	   color: $dark-melon;  
+	&#formarea:-ms-input-placeholder {  
+		color: $soft-melon;  
 	}
 }
 
